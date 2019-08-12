@@ -17,6 +17,7 @@ using Twenty_One_WPF;
 using static Twenty_One_WPF.App;
 using Quicktools;
 using static CardGameClassLibrary.Deck;
+using System.Threading;
 
 namespace Twenty_One_WPF
 {
@@ -31,42 +32,43 @@ namespace Twenty_One_WPF
         {
             if (GetPlayerPoints() < 21)
             {
-                status.Content = SummariseHand() + " These are worth " + GetPlayerPoints() + " points. \n" + stickortwist;
+                status.Text = SummariseHand() + " These are worth " + GetPlayerPoints() + " points. \n" + stickortwist;
             }
             else if (GetPlayerPoints() == 21)
             {
-                status.Content = SummariseHand() + "\n21! Dealer must match your score to win...";
+                status.Text = SummariseHand() + "\n21! Dealer must match your score to win...";
                 DealerRound();
             }
             else if (GetPlayerPoints() > 21)
             {
-                status.Content = SummariseHand()+ " These are worth " + GetPlayerPoints() + " points." + "\nBust! Unlucky...";
+                status.Text = SummariseHand()+ " These are worth " + GetPlayerPoints() + " points." + "\nBust! Unlucky...";
             }
         }
         //Responsible for the dealer's cards being drawn and the dealer's decision making.
         public void DealerRound()
         {
             dealerhand.AddMany(new Card(), new Card());
-            status.Content = SummariseDealer() + "\nThese are worth " + GetDealerPoints() + " points.";
+            status.Text = SummariseDealer() + "\nThese are worth " + GetDealerPoints() + " points.";
 
             do
             {
                 dealerhand.Add(new Card());
-                status.Content = "Dealer twists!\n" + SummariseDealer() + "\nThese are worth " + GetDealerPoints() + " points. ";
+                status.Text = "Dealer twists!\n" + SummariseDealer() + "\nThese are worth " + GetDealerPoints() + " points. ";
+                
 
                 if (GetDealerPoints() > 21)
                 {
-                    status.Content = SummariseDealer() + " Dealer is bust... You Win!";
+                    status.Text = SummariseDealer() + " Dealer is bust... You Win!";
                 }
                 else if (GetDealerPoints() > GetPlayerPoints() && GetDealerPoints() <= 21)
                 {
-                    status.Content = "Dealer Wins! Dealer has " + GetDealerPoints() + " points and you only have " + GetPlayerPoints() + " points. Unlucky!";
+                    status.Text = "Dealer Wins! Dealer has " + GetDealerPoints() + " points and you only have " + GetPlayerPoints() + " points. Unlucky!";
                 }
                 else if (GetDealerPoints() == GetPlayerPoints())
                 {
-                    status.Content = SummariseDealer() + " Dealer gets house advantage, Dealer wins with " + GetDealerPoints() + " points.";
+                    status.Text = SummariseDealer() + " Dealer gets house advantage, Dealer wins with " + GetDealerPoints() + " points.";
                 }
-                status.Content += "\nDo you want to play again? (Press Game to start over or Quit to end.";
+                status.Text += "\nDo you want to play again? Press Game to start over or Quit to end.";
             } while (GetDealerPoints() < 22 && GetDealerPoints() < GetPlayerPoints());
         }
         public void Stick_MouseUp(object sender1, MouseButtonEventArgs e)
@@ -81,16 +83,17 @@ namespace Twenty_One_WPF
             PlayRound();
             if (GetPlayerPoints() < 21)
             {
-                status.Content = SummariseHand() + " These are worth " + GetPlayerPoints() + " points. \n" + stickortwist;
+                status.Text = SummariseHand() + " These are worth " + GetPlayerPoints() + " points. \n" + stickortwist;
             }
             else if (GetPlayerPoints() == 21)
             {
-                status.Content = SummariseHand() + "\n21! Dealer must match your score to win...";
+                status.Text = SummariseHand() + "\n21! Dealer must match your score to win...";
+                Thread.Sleep(3000);
                 DealerRound();
             }
             else if (GetPlayerPoints() > 21)
             {
-                status.Content = SummariseHand() + "\nBust! Unlucky...";
+                status.Text = SummariseHand() + "\nBust! Unlucky...";
             }
         }
 

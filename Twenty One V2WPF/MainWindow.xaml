@@ -6,35 +6,39 @@
         xmlns:local="clr-namespace:Twenty_One_WPF"
         mc:Ignorable="d"
         Title="Twenty-One" Height="450" Width="800">
-    <Grid>
-        <Label x:Name="status"></Label>
+    <Grid Background="Black">
+        <TextBlock x:Name="status" HorizontalAlignment="Center" FontSize="18" TextWrapping="Wrap" Padding="10" Foreground="Aqua"></TextBlock>
         <Button x:Name="Twist" 
+                Background="DarkGray"
                 ToolTip="Ask dealer to deal you another card." 
-                MouseUp="Twist_MouseUp" 
+                PreviewMouseDown="Twist_MouseUp" 
                 Content="Twist" 
-                Margin="50,169,0,151" 
+                Margin="10,350,0,14" 
                 HorizontalAlignment="Left" 
-                Width="103"/>
+                Width="103" RenderTransformOrigin="0.629,0.66"/>
         <Button x:Name="Stick" 
+                Background="DarkGray"
                 ToolTip="Let dealer play to try and match or beat your score." 
-                MouseUp="Stick_MouseUp" 
+                PreviewMouseDown="Stick_MouseUp" 
                 Content="Stick" 
-                Margin="0,169,28.6,151" 
+                Margin="0,350,10,14" 
                 HorizontalAlignment="Right" 
                 Width="95"/>
         <Button x:Name="Play" 
                 ToolTip="Play a new round." 
-                MouseUp="Play_MouseUp" 
+                PreviewMouseDown="Play_MouseUp" 
                 Content="Play" 
-                Margin="344,169,344.6,151" 
+                Margin="344,329,344.6,50" 
+                VerticalAlignment="Bottom"
                 HorizontalAlignment="Center" 
                 Width="105"/>
         <Button x:Name="Quit" 
                 ToolTip="End game and close the application." 
-                MouseUp="Quit_MouseUp" 
+                PreviewMouseDown="Quit_MouseUp" 
                 Content="Quit" 
-                Margin="344,269,344.6,51" 
-                HorizontalAlignment="Center" 
+                Margin="344,379,344.6,0" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
                 Width="105"/>
     </Grid>
 </Window>
