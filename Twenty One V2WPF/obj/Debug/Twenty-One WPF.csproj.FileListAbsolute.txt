@@ -16,4 +16,3 @@ C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Debug\Twenty
 C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Debug\Twenty-One WPF.exe
 C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Debug\Twenty-One WPF.pdb
 C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Debug\Quicktools.dll
-C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Debug\Quicktools.pdb

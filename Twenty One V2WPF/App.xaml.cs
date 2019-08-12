@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using CardGameClassLibrary;
 using System.Windows.Input;
-using static Twenty_One_WPF.MainWindow;
 using Quicktools;
 using static CardGameClassLibrary.Deck;
 
@@ -15,7 +14,7 @@ namespace Twenty_One_WPF
     public partial class App
     {
         // These communicate game state to the player.
-        public static string stickortwist = "Do you want to stick or twist? (Type 'stick' or 'twist')";
+        public static string stickortwist = "Do you want to stick or twist?";
         public static string playerinput;
         static string handsummary;
 
@@ -24,12 +23,12 @@ namespace Twenty_One_WPF
 
         public static string quit;
 
-        static int dealerpoints;
-        static int playerpoints;
+        public static int dealerpoints;
+        public static int playerpoints;
 
         // Represents the player's cards and the dealer's cards.
         static List<Card> playerhand = new List<Card>();
-        static List<Card> dealerhand = new List<Card>();
+        public static List<Card> dealerhand = new List<Card>();
 
         //Responsible for the initial two card deal and for re-initialising the variables for a new game.
         public static bool initdone = false;
@@ -71,7 +70,7 @@ namespace Twenty_One_WPF
             return "In your hand you have the " + handsummary;
         }
 
-        static string SummariseDealer()
+        public static string SummariseDealer()
         {
             handsummary = "";
             for (var i = 0; i < dealerhand.Count(); i++)
@@ -106,7 +105,7 @@ namespace Twenty_One_WPF
             }
             return playerpoints;
         }
-        static int GetDealerPoints()
+        public static int GetDealerPoints()
         {
             dealerpoints = 0;
             for (var i = 0; i < dealerhand.Count; i++)
@@ -123,67 +122,6 @@ namespace Twenty_One_WPF
         static public void PlayRound()
         {
             playerhand.Add(new Card());
-        }
-        //Responsible for the dealer's cards being drawn and the dealer's decision making.
-        public static void DealerRound()
-        {
-            dealerhand.AddMany(new Card(), new Card());
-            Console.WriteLine(SummariseDealer());
-            Console.WriteLine("These are worth " + GetDealerPoints() + " points.");
-
-            while (GetDealerPoints() < 22 && GetDealerPoints() < GetPlayerPoints())
-            {
-                Console.WriteLine();
-                Console.WriteLine("Dealer twists!");
-                dealerhand.Add(new Card());
-                Console.WriteLine();
-                Console.WriteLine(SummariseDealer());
-                Console.WriteLine("These are worth " + GetDealerPoints() + " points.");
-            }
-
-
-            if (GetDealerPoints() > 21)
-            {
-                Console.WriteLine();
-                Console.WriteLine("Dealer is bust... You Win!");
-            }
-            else if (GetDealerPoints() > GetPlayerPoints() && GetDealerPoints() <= 21)
-            {
-                Console.WriteLine();
-                Console.WriteLine("Dealer Wins! Dealer has " + GetDealerPoints() + " points and you only have " + GetPlayerPoints() + " points. Unlucky!");
-            }
-            else if (GetDealerPoints() == GetPlayerPoints())
-            {
-                Console.WriteLine();
-                Console.WriteLine("Dealer gets house advantage, Dealer wins with " + GetDealerPoints() + " points.");
-            }
-
-        }
-        public static void Game()
-        {
-
-            if (GetPlayerPoints() < 21)
-            {
-                Console.WriteLine();
-                Console.WriteLine(SummariseHand());
-
-                Console.WriteLine("These are worth " + GetPlayerPoints() + " points.");
-                Console.WriteLine(stickortwist);
-                playerinput = Console.ReadLine();
-
-            }
-            else if (GetPlayerPoints() == 21)
-            {
-                Console.WriteLine();
-                Console.WriteLine("21! Dealer must match your score to win...");
-                DealerRound();
-            }
-            else if (GetPlayerPoints() > 21)
-            {
-                Console.WriteLine();
-                Console.WriteLine(SummariseHand());
-                Console.WriteLine("Bust! Unlucky...");
-            }
         }
     }
 }

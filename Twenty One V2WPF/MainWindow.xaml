@@ -7,8 +7,34 @@
         mc:Ignorable="d"
         Title="Twenty-One" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Twist" MouseUp="Twist_MouseUp" Content="Twist" Margin="0,0,399.6,320" HorizontalAlignment="Left"/>
-        <Button x:Name="Stick" MouseUp="Stick_MouseUp" Content="Stick" Margin="394,0,5.6,320" HorizontalAlignment="Right"/>
-        <Button x:Name="Play" MouseUp="Play_MouseUp" Content="Play" Margin="384,10,384.6,310" HorizontalAlignment="Center"/>
+        <Label x:Name="status"></Label>
+        <Button x:Name="Twist" 
+                ToolTip="Ask dealer to deal you another card." 
+                MouseUp="Twist_MouseUp" 
+                Content="Twist" 
+                Margin="50,169,0,151" 
+                HorizontalAlignment="Left" 
+                Width="103"/>
+        <Button x:Name="Stick" 
+                ToolTip="Let dealer play to try and match or beat your score." 
+                MouseUp="Stick_MouseUp" 
+                Content="Stick" 
+                Margin="0,169,28.6,151" 
+                HorizontalAlignment="Right" 
+                Width="95"/>
+        <Button x:Name="Play" 
+                ToolTip="Play a new round." 
+                MouseUp="Play_MouseUp" 
+                Content="Play" 
+                Margin="344,169,344.6,151" 
+                HorizontalAlignment="Center" 
+                Width="105"/>
+        <Button x:Name="Quit" 
+                ToolTip="End game and close the application." 
+                MouseUp="Quit_MouseUp" 
+                Content="Quit" 
+                Margin="344,269,344.6,51" 
+                HorizontalAlignment="Center" 
+                Width="105"/>
     </Grid>
 </Window>

@@ -13,7 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using Twenty_One_WPF;
 using static Twenty_One_WPF.App;
+using Quicktools;
+using static CardGameClassLibrary.Deck;
 
 namespace Twenty_One_WPF
 {
@@ -23,32 +26,48 @@ namespace Twenty_One_WPF
     public partial class MainWindow : Window
     {
         // Responsible for the UI.
-
-        public static void Game()
+        
+        public void Game()
         {
-
             if (GetPlayerPoints() < 21)
             {
-                Console.WriteLine();
-                Console.WriteLine(SummariseHand());
-
-                Console.WriteLine("These are worth " + GetPlayerPoints() + " points.");
-                Console.WriteLine(stickortwist);
-                playerinput = Console.ReadLine();
-
+                status.Content = SummariseHand() + " These are worth " + GetPlayerPoints() + " points. \n" + stickortwist;
             }
             else if (GetPlayerPoints() == 21)
             {
-                Console.WriteLine();
-                Console.WriteLine("21! Dealer must match your score to win...");
+                status.Content = SummariseHand() + "\n21! Dealer must match your score to win...";
                 DealerRound();
             }
             else if (GetPlayerPoints() > 21)
             {
-                Console.WriteLine();
-                Console.WriteLine(SummariseHand());
-                Console.WriteLine("Bust! Unlucky...");
+                status.Content = SummariseHand()+ " These are worth " + GetPlayerPoints() + " points." + "\nBust! Unlucky...";
             }
+        }
+        //Responsible for the dealer's cards being drawn and the dealer's decision making.
+        public void DealerRound()
+        {
+            dealerhand.AddMany(new Card(), new Card());
+            status.Content = SummariseDealer() + "\nThese are worth " + GetDealerPoints() + " points.";
+
+            do
+            {
+                dealerhand.Add(new Card());
+                status.Content = "Dealer twists!\n" + SummariseDealer() + "\nThese are worth " + GetDealerPoints() + " points. ";
+
+                if (GetDealerPoints() > 21)
+                {
+                    status.Content = SummariseDealer() + " Dealer is bust... You Win!";
+                }
+                else if (GetDealerPoints() > GetPlayerPoints() && GetDealerPoints() <= 21)
+                {
+                    status.Content = "Dealer Wins! Dealer has " + GetDealerPoints() + " points and you only have " + GetPlayerPoints() + " points. Unlucky!";
+                }
+                else if (GetDealerPoints() == GetPlayerPoints())
+                {
+                    status.Content = SummariseDealer() + " Dealer gets house advantage, Dealer wins with " + GetDealerPoints() + " points.";
+                }
+                status.Content += "\nDo you want to play again? (Press Game to start over or Quit to end.";
+            } while (GetDealerPoints() < 22 && GetDealerPoints() < GetPlayerPoints());
         }
         public void Stick_MouseUp(object sender1, MouseButtonEventArgs e)
         {
@@ -60,6 +79,19 @@ namespace Twenty_One_WPF
         {
             Debug.WriteLine("twisted");
             PlayRound();
+            if (GetPlayerPoints() < 21)
+            {
+                status.Content = SummariseHand() + " These are worth " + GetPlayerPoints() + " points. \n" + stickortwist;
+            }
+            else if (GetPlayerPoints() == 21)
+            {
+                status.Content = SummariseHand() + "\n21! Dealer must match your score to win...";
+                DealerRound();
+            }
+            else if (GetPlayerPoints() > 21)
+            {
+                status.Content = SummariseHand() + "\nBust! Unlucky...";
+            }
         }
 
         private void Play_MouseUp(object sender, MouseButtonEventArgs e)
@@ -73,14 +105,13 @@ namespace Twenty_One_WPF
 
                     Game();
 
-                    Debug.WriteLine("Do you want to play again? (Press Enter to continue or type 'quit' to end game.)");
-                    quit = "test";
-                    if (quit.ToLower() == "quit")
-                        gameover = true;
-                    else
-                    {
-                        initdone = false;
-                    }
+                    initdone = false;
+                    
+        }
+
+        private void Quit_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Environment.Exit(1);
         }
     }
 }
