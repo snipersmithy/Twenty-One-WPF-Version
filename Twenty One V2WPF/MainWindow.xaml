@@ -1,0 +1,14 @@
+﻿<Window x:Class="Twenty_One_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Twenty_One_WPF"
+        mc:Ignorable="d"
+        Title="Twenty-One" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="Twist" MouseUp="Twist_MouseUp" Content="Twist" Margin="0,0,399.6,320" HorizontalAlignment="Left"/>
+        <Button x:Name="Stick" MouseUp="Stick_MouseUp" Content="Stick" Margin="394,0,5.6,320" HorizontalAlignment="Right"/>
+        <Button x:Name="Play" MouseUp="Play_MouseUp" Content="Play" Margin="384,10,384.6,310" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

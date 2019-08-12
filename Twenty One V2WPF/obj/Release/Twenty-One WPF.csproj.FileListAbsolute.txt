@@ -1,0 +1,17 @@
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\MainWindow.g.cs
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\App.g.cs
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF_MarkupCompile.cache
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF_MarkupCompile.lref
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Release\Twenty-One WPF.exe.config
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Release\Twenty-One WPF.exe
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Release\Twenty-One WPF.pdb
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Release\ClassLib.dll
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Release\QuicktoolsV2.dll
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\MainWindow.baml
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.g.resources
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty_One_WPF.Properties.Resources.resources
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.csproj.GenerateResource.cache
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.csproj.CoreCompileInputs.cache
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.csproj.CopyComplete
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.exe
+C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.pdb
