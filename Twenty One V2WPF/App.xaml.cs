@@ -37,6 +37,7 @@ namespace Twenty_One_WPF
             playerhand.Clear();
             dealerhand.Clear();
 
+
             dealerpoints = 0;
             playerpoints = 0;
 

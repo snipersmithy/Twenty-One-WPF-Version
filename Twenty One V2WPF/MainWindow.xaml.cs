@@ -27,7 +27,6 @@ namespace Twenty_One_WPF
     public partial class MainWindow : Window
     {
         // Responsible for the UI.
-        
         public void Game()
         {
             if (GetPlayerPoints() < 21)
@@ -74,6 +73,8 @@ namespace Twenty_One_WPF
         public void Stick_MouseUp(object sender1, MouseButtonEventArgs e)
         {
             Debug.WriteLine("stuck");
+            Stick.IsEnabled = false;
+            Twist.IsEnabled = false;
             DealerRound();
         }
 
@@ -103,11 +104,12 @@ namespace Twenty_One_WPF
                     if (initdone == false)
                     {
                         BeginGame();
+                        Stick.IsEnabled = true;
+                        Twist.IsEnabled = true;
                         initdone = true;
                     }
 
                     Game();
-
                     initdone = false;
                     
         }

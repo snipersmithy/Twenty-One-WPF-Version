@@ -15,7 +15,8 @@
                 Content="Twist" 
                 Margin="10,350,0,14" 
                 HorizontalAlignment="Left" 
-                Width="103" RenderTransformOrigin="0.629,0.66"/>
+                Width="103" RenderTransformOrigin="0.629,0.66"
+                IsEnabled="False"/>
         <Button x:Name="Stick" 
                 Background="DarkGray"
                 ToolTip="Let dealer play to try and match or beat your score." 
@@ -23,7 +24,8 @@
                 Content="Stick" 
                 Margin="0,350,10,14" 
                 HorizontalAlignment="Right" 
-                Width="95"/>
+                Width="95"
+                IsEnabled="False"/>
         <Button x:Name="Play" 
                 ToolTip="Play a new round." 
                 PreviewMouseDown="Play_MouseUp" 
