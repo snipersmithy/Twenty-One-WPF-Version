@@ -6,17 +6,19 @@
         xmlns:local="clr-namespace:Twenty_One_WPF"
         mc:Ignorable="d"
         Title="Twenty-One" Height="450" Width="800">
-    <Grid Background="Black">
+    <Grid Background="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <TextBlock x:Name="status" HorizontalAlignment="Center" FontSize="18" TextWrapping="Wrap" Padding="10" Foreground="Aqua"></TextBlock>
+        <TextBlock x:Name="PlayerHas" HorizontalAlignment="Center" FontSize="14" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="Aqua"></TextBlock>
         <Button x:Name="Twist" 
                 Background="DarkGray"
                 ToolTip="Ask dealer to deal you another card." 
                 PreviewMouseDown="Twist_MouseUp" 
                 Content="Twist" 
-                Margin="10,350,0,14" 
+                Margin="10,0,0,14" 
                 HorizontalAlignment="Left" 
                 Width="103" RenderTransformOrigin="0.629,0.66"
-                IsEnabled="False"/>
+                IsEnabled="False"
+                VerticalAlignment="Bottom" Height="55"/>
         <Button x:Name="Stick" 
                 Background="DarkGray"
                 ToolTip="Let dealer play to try and match or beat your score." 
@@ -25,12 +27,13 @@
                 Margin="0,350,10,14" 
                 HorizontalAlignment="Right" 
                 Width="95"
-                IsEnabled="False"/>
+                IsEnabled="False"
+                VerticalAlignment="Bottom" Height="55"/>
         <Button x:Name="Play" 
                 ToolTip="Play a new round." 
                 PreviewMouseDown="Play_MouseUp" 
                 Content="Play" 
-                Margin="344,329,344.6,50" 
+                Margin="343,0,344,49" 
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Center" 
                 Width="105"/>
@@ -38,7 +41,7 @@
                 ToolTip="End game and close the application." 
                 PreviewMouseDown="Quit_MouseUp" 
                 Content="Quit" 
-                Margin="344,379,344.6,0" 
+                Margin="343,0,344,14" 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Width="105"/>

@@ -41,8 +41,6 @@ namespace Twenty_One_WPF
             dealerpoints = 0;
             playerpoints = 0;
 
-            Console.WriteLine("Dealer to deal two cards...");
-
             var pc1 = new Card();
             var pc2 = new Card();
 

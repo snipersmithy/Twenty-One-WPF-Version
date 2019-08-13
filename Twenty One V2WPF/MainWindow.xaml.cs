@@ -26,9 +26,9 @@ namespace Twenty_One_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        // Responsible for the UI.
         public void Game()
         {
+            PlayerHas.Text = "";
             if (GetPlayerPoints() < 21)
             {
                 status.Text = SummariseHand() + " These are worth " + GetPlayerPoints() + " points. \n" + stickortwist;
@@ -38,10 +38,7 @@ namespace Twenty_One_WPF
                 status.Text = SummariseHand() + "\n21! Dealer must match your score to win...";
                 DealerRound();
             }
-            else if (GetPlayerPoints() > 21)
-            {
-                status.Text = SummariseHand()+ " These are worth " + GetPlayerPoints() + " points." + "\nBust! Unlucky...";
-            }
+
         }
         //Responsible for the dealer's cards being drawn and the dealer's decision making.
         public void DealerRound()
@@ -52,6 +49,7 @@ namespace Twenty_One_WPF
             do
             {
                 dealerhand.Add(new Card());
+                PlayerHas.Text = SummariseHand() + " These are worth " + GetPlayerPoints() + " points.";
                 status.Text = "Dealer twists!\n" + SummariseDealer() + "\nThese are worth " + GetDealerPoints() + " points. ";
                 
 
@@ -67,9 +65,10 @@ namespace Twenty_One_WPF
                 {
                     status.Text = SummariseDealer() + " Dealer gets house advantage, Dealer wins with " + GetDealerPoints() + " points.";
                 }
-                status.Text += "\nDo you want to play again? Press Game to start over or Quit to end.";
+                status.Text += "\nDo you want to play again? Press Play to start over or Quit to end.";
             } while (GetDealerPoints() < 22 && GetDealerPoints() < GetPlayerPoints());
         }
+        // Responsible for the UI.
         public void Stick_MouseUp(object sender1, MouseButtonEventArgs e)
         {
             Debug.WriteLine("stuck");
@@ -94,7 +93,9 @@ namespace Twenty_One_WPF
             }
             else if (GetPlayerPoints() > 21)
             {
-                status.Text = SummariseHand() + "\nBust! Unlucky...";
+                status.Text = SummariseHand() + " These are worth " + GetPlayerPoints() + " points." + "\nBust! Unlucky..." + "\nDo you want to play again? Press Play to start over or Quit to end.";
+                Twist.IsEnabled = false;
+                Stick.IsEnabled = false;
             }
         }
 

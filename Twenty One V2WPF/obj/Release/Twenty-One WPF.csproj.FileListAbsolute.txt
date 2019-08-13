@@ -15,3 +15,21 @@ C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twen
 C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.exe
 C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.pdb
 C:\Users\cex\Documents\GitHub\Twenty-One V2WPF\Twenty One V2WPF\bin\Release\Quicktools.dll
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\bin\Release\Twenty-One WPF.exe.config
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\bin\Release\Twenty-One WPF.exe
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\bin\Release\Twenty-One WPF.pdb
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\bin\Release\ClassLib.dll
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\bin\Release\Quicktools.dll
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.csprojAssemblyReference.cache
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\MainWindow.g.cs
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\App.g.cs
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF_MarkupCompile.cache
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF_MarkupCompile.lref
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\MainWindow.baml
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.g.resources
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty_One_WPF.Properties.Resources.resources
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.csproj.GenerateResource.cache
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.csproj.CoreCompileInputs.cache
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.csproj.CopyComplete
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.exe
+H:\GitHub\Twenty One WPF\Twenty One V2WPF\obj\Release\Twenty-One WPF.pdb
